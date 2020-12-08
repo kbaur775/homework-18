@@ -7,10 +7,7 @@ function saveRecord(transaction) {
 function persist() {
   fetch("/api/transaction/bulk", { method: "POST", body: JSON.stringify(transactions)})
     .then(response => response.json())
-    .then(() => transactions = []});
+    .then(() => transactions = []);
 }
 
-function asd() {
-
-}
 window.addEventListener("online", persist);
